@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B201678-D78E-40CA-B91D-9DC038420FEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>STDApp</RootNamespace>
+    <AssemblyName>Stata</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>STDApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>Libs\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FPT">
+      <HintPath>..\Libs\FPT.dll</HintPath>
+    </Reference>
+    <Reference Include="jose-jwt, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.5.1.0\lib\net472\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PN.SmartLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Libs\PN.SmartLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=112.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.1.0\lib\net48\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Sap.Data.Hana.v4.5, Version=2.17.22.0, Culture=neutral, PublicKeyToken=0326b8ea63db4bc4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Sap.Data.Hana.v4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK, Version=1.1.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL" />
+    <Reference Include="SAPCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Libs\SAPCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessSAP\PaymentViaDI.cs" />
+    <Compile Include="Bank\frmRate.b1f.cs">
+      <DependentUpon>frmRate.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BIDVTransferRequest.cs" />
+    <Compile Include="Models\InvoicePayment.cs" />
+    <Compile Include="Models\PayooGetSettlement.cs" />
+    <Compile Include="Models\PayooResponse.cs" />
+    <Compile Include="Models\RateRequest.cs" />
+    <Compile Include="Models\RateResponse.cs" />
+    <Compile Include="Payoo\frmBatch.b1f.cs">
+      <DependentUpon>frmBatch.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\frmInquiry.b1f.cs">
+      <DependentUpon>frmInquiry.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Common\APIHelper.cs" />
+    <Compile Include="Common\APIUtil.cs" />
+    <Compile Include="Common\BankConfig.cs" />
+    <Compile Include="DataReader\DataHelper.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Models\Banks.cs" />
+    <Compile Include="Models\BIDVAccesstokenResponse.cs" />
+    <Compile Include="Models\BIDVDomesticPaymentRequest.cs" />
+    <Compile Include="Models\BIDVInquiryRequest.cs" />
+    <Compile Include="Models\BIDVInquiryResponse.cs" />
+    <Compile Include="Models\ChangeOfApprove.cs" />
+    <Compile Include="Models\InquiryDetail.cs" />
+    <Compile Include="Models\InquiryHeader.cs" />
+    <Compile Include="Models\InquiryRequest.cs" />
+    <Compile Include="Models\PaymentActionResult.cs" />
+    <Compile Include="Models\PaymentDetail.cs" />
+    <Compile Include="Models\PaymentEventArgs.cs" />
+    <Compile Include="Models\TransferDetail.cs" />
+    <Compile Include="Models\TransferHeader.cs" />
+    <Compile Include="Models\TransferInq.cs" />
+    <Compile Include="Models\TransferInqRequest.cs" />
+    <Compile Include="Models\TransferRequest.cs" />
+    <Compile Include="Models\VTRequest.cs" />
+    <Compile Include="Payment\frmAddPaymentLine.b1f.cs">
+      <DependentUpon>frmAddPaymentLine.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\frmApprovePayment.b1f.cs">
+      <DependentUpon>frmApprovePayment.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\frmObjectFilter.b1f.cs">
+      <DependentUpon>frmObjectFilter.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\frmPayment.b1f.cs">
+      <DependentUpon>frmPayment.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\frmPaymentReview.b1f.cs">
+      <DependentUpon>frmPaymentReview.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewHelper..cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank\frmRate.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Info\private1.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Payoo\frmBatch.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Bank\frmInquiry.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Info\BIDV.cer" />
+    <None Include="Info\certificate.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Info\private.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Payment\frmAddPaymentLine.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Payment\frmApprovePayment.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Payment\frmObjectFilter.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Payment\frmPayment.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Payment\frmPaymentReview.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataReader\Scripts\tb_Addon_Config.sql" />
+    <Content Include="DataReader\Scripts\tb_Bank_BIDVInquiryTran.sql" />
+    <Content Include="DataReader\Scripts\InquiryDetail.sql" />
+    <Content Include="DataReader\Scripts\PayooBatch.sql" />
+    <Content Include="DataReader\Scripts\tb_Bank_PaymentOnAccount.sql" />
+    <Content Include="DataReader\Scripts\TransferRecord.sql" />
+    <Content Include="DataReader\Scripts\InquiryHeader.sql" />
+    <Content Include="DataReader\Scripts\pn_vwCashFlow.sql" />
+    <Content Include="DataReader\Scripts\tb_Bank_Payment.sql" />
+    <Content Include="DataReader\Scripts\usp_Bank_APInvoicesToPayment.sql" />
+    <Content Include="DataReader\Scripts\usp_Bank_LoadBPInfor.sql" />
+    <Content Include="DataReader\Scripts\usp_PaymentListReport.sql" />
+    <Content Include="DataReader\Scripts\usp_PaymentListReportDetail.sql" />
+    <Content Include="DataReader\Scripts\vw_Bank_BankAccount.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\STD_Libs\STDLibs.csproj">
+      <Project>{ec3efff1-96f7-4c61-af02-bf2d79ea97b5}</Project>
+      <Name>STDLibs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
