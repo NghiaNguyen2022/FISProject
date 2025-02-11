@@ -87,29 +87,6 @@ namespace PN.ApplicationAPI.Models
             try
             {
                 var dbName = ConfigurationManager.AppSettings["Schema"];
-                var query = "INSERT INTO \"" + dbName + "\".\"tb_Payoo_PaymentINT\" VALUES ( ";
-                query += $"{PaymentMethod},";
-                query += $"'{PaymentMethodName}',";
-                query += $"'{PurDate}',";
-                query += $"'{MerchantUserName}',";
-                query += $"{ShopId},";
-                query += $"{MasterShopID},";
-                query += $"'{OrderNo}',";
-                query += $"{OrderCash},";
-                query += $"'{BankName}',";
-                query += $"'{CardNumber}',";
-                query += $"{CardIssuanceType},";
-                query += $"{PaymentStatus},";
-                query += $"'{MDD1}',";
-                query += $"'{MDD2}',";
-                query += $"'{PaymentSource}',";
-                query += $"{VoucherTotalAmount},";
-                query += $"'{VoucherID}',";
-                query += $"'{DateTime.Now.ToString("yyyyMMdd")}',";
-                query += $"'{DateTime.Now.ToString("HHmmss")}',";
-                query += $"{PaymentMethodSub}";
-                query += ")";
-
                 var ret = -1;
 
                 if (ShopId.ToString() == ConfigurationManager.AppSettings["ShopID"].ToString())
@@ -130,8 +107,44 @@ namespace PN.ApplicationAPI.Models
                         }
                         if (subret)
                         {
-                            ret = dbProvider.ExecuteNonQuery(query);
-                            message = ret == 1 ? "Lưu thành công" : "Lưu thất bại";
+                            foreach (var order in Orders)
+                            {
+                                var query = "INSERT INTO \"" + dbName + "\".\"tb_Payoo_PaymentINT\" VALUES ( ";
+                                query += $"{PaymentMethod},";
+                                query += $"'{PaymentMethodName}',";
+                                query += $"'{PurDate}',";
+                                query += $"'{MerchantUserName}',";
+                                query += $"{ShopId},";
+                                query += $"{MasterShopID},";
+                                query += $"'{order.OrderNo}',";
+                                query += $"{OrderCash},";
+                                query += $"'{BankName}',";
+                                query += $"'{CardNumber}',";
+                                query += $"{CardIssuanceType},";
+                                query += $"{PaymentStatus},";
+                                query += $"'{MDD1}',";
+                                query += $"'{MDD2}',";
+                                query += $"'{PaymentSource}',";
+                                query += $"{VoucherTotalAmount},";
+                                query += $"'{VoucherID}',";
+                                query += $"'{DateTime.Now.ToString("yyyyMMdd")}',";
+                                query += $"'{DateTime.Now.ToString("HHmmss")}',";
+                                query += $"{PaymentMethodSub}";
+                                query += ")";
+
+                                ret = dbProvider.ExecuteNonQuery(query);
+                                message = ret == 1 ? "Lưu thành công" : "Lưu thất bại";
+
+                                if (ret != 1)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    query = "UPDATE \"" + dbName + "\".OINV SET \"U_PayooMark\" = 'PAYOOWEB' WHERE \"DocNum\" = " + OrderNo;
+                                    var ret1 = dbProvider.ExecuteNonQuery(query);
+                                }
+                            }
                         }
                         else
                         {
@@ -141,6 +154,29 @@ namespace PN.ApplicationAPI.Models
                 }
                 else
                 {
+                    var query = "INSERT INTO \"" + dbName + "\".\"tb_Payoo_PaymentINT\" VALUES ( ";
+                    query += $"{PaymentMethod},";
+                    query += $"'{PaymentMethodName}',";
+                    query += $"'{PurDate}',";
+                    query += $"'{MerchantUserName}',";
+                    query += $"{ShopId},";
+                    query += $"{MasterShopID},";
+                    query += $"'{OrderNo}',";
+                    query += $"{OrderCash},";
+                    query += $"'{BankName}',";
+                    query += $"'{CardNumber}',";
+                    query += $"{CardIssuanceType},";
+                    query += $"{PaymentStatus},";
+                    query += $"'{MDD1}',";
+                    query += $"'{MDD2}',";
+                    query += $"'{PaymentSource}',";
+                    query += $"{VoucherTotalAmount},";
+                    query += $"'{VoucherID}',";
+                    query += $"'{DateTime.Now.ToString("yyyyMMdd")}',";
+                    query += $"'{DateTime.Now.ToString("HHmmss")}',";
+                    query += $"{PaymentMethodSub}";
+                    query += ")";
+
                     ret = dbProvider.ExecuteNonQuery(query);
                     message = ret == 1 ? "Lưu thành công" : "Lưu thất bại";
                     if (ret == 1)

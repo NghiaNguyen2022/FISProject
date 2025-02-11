@@ -79,6 +79,7 @@ namespace PN.ApplicationAPI.Controllers
                 }
             }
             var message = string.Empty;
+            
             if (objBody.InsertData(ref message))
                 return Ok(ResponseSuccessed(message));
             return Ok(ResponseFaild(message));
