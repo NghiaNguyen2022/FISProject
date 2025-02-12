@@ -41,7 +41,7 @@ namespace PN.ApplicationAPI.Models
                 {
                     message = "Lưu thành công";
 
-                    query = "UPDATE \"" + dbName + "\".OINV SET \"U_PayooMark\" = 'PAYOOQR' WHERE \"DocNum\" = " + OrderNo;
+                    query = "UPDATE \"" + dbName + "\".OINV SET \"U_PayooMark\" = 'PAYOOWEB' WHERE \"DocNum\" = " + OrderNo;
                     var ret11 = dbProvider.ExecuteNonQuery(query);
 
                     return true;
@@ -141,8 +141,8 @@ namespace PN.ApplicationAPI.Models
                                 }
                                 else
                                 {
-                                    query = "UPDATE \"" + dbName + "\".OINV SET \"U_PayooMark\" = 'PAYOOWEB' WHERE \"DocNum\" = " + OrderNo;
-                                    var ret1 = dbProvider.ExecuteNonQuery(query);
+                                    var query_oinv = "UPDATE \"" + dbName + "\".OINV SET \"U_PayooMark\" = 'PAYOOWEB' WHERE \"DocNum\" = " + OrderNo;
+                                    var ret1 = dbProvider.ExecuteNonQuery(query_oinv);
                                 }
                             }
                         }
