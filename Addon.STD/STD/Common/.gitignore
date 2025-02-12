@@ -1,8 +1,0 @@
-/obj
-/bin
-/.vs
-/DLLs/*/*.b1s
-/DLLs/*/*.pdb
-/PN.Libs/obj
-/SAPCore/obj
-/SAPCore/bin
