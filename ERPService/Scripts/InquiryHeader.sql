@@ -1,0 +1,22 @@
+﻿CREATE TABLE "tb_Bank_InquiryHeader"
+(
+    "requestId" NVARCHAR(30),
+    "providerId" NVARCHAR(30),
+    "merchantId" NVARCHAR(30),
+    "bankAccount" NVARCHAR(30),
+    "bankName" NVARCHAR(200),    
+    "accountType" NVARCHAR(30),
+    "curency" NVARCHAR(5),
+    "balance" DECIMAL(19,2),
+    "availBalance" DECIMAL(19,2),
+    "openBalance" DECIMAL(19,2),
+    "closeBalance" DECIMAL(19,2), 
+    "fromDate" NVARCHAR(30), 
+    "totalCredit" DECIMAL(19,2),
+    "creditTransNo" INT,
+    "totalDebit" DECIMAL(19,2),
+    "debitTransNo" INT,
+    "toDate" NVARCHAR(30),
+    "fromTime" NVARCHAR(30), 
+    "toTime" NVARCHAR(30),
+)
