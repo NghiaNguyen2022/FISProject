@@ -49,6 +49,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PN.SmartLib">
+      <HintPath>..\..\Common\Libs\PN.SmartLib.dll</HintPath>
+    </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Swashbuckle.Core.5.2.1\lib\net40\Swashbuckle.Core.dll</HintPath>
     </Reference>
@@ -271,10 +274,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\PN.Libs\PN.SmartLib.csproj">
-      <Project>{141D8614-7F15-4B5A-994F-A6F960D8A451}</Project>
-      <Name>PN.SmartLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\SAPCore\SAPCore.csproj">
       <Project>{90B593C4-84B2-465F-979B-8D7A5F113243}</Project>
       <Name>SAPCore</Name>

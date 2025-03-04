@@ -42,7 +42,7 @@ namespace SAPCore.Config
         {
             get
             {
-                var type = ConfigurationManager.AppSettings["SystemType"].ToString().GetEnumValueByDescription<SystemType>();
+                var type = SystemType.SAP_HANA;// ConfigurationManager.AppSettings["SystemType"].ToString().GetEnumValueByDescription<SystemType>();
                 return type;// ConfigurationManager.AppSettings["SystemType"].ToString().GetEnumValueByDescription<SystemType>();
             }
         }
