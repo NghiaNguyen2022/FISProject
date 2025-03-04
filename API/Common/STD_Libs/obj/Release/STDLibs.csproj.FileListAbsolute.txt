@@ -1,0 +1,13 @@
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\STDLibs.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\STDLibs.pdb
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\PN.SmartLib.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\SAPCore.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\SAPBusinessOneSDK.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\Sap.Data.Hana.v4.5.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\SAPCore.pdb
+E:\Source\Git\Oursource\STD\Common\STD_Libs\bin\Release\SAPCore.dll.config
+E:\Source\Git\Oursource\STD\Common\STD_Libs\obj\Release\STDLibs.csprojAssemblyReference.cache
+E:\Source\Git\Oursource\STD\Common\STD_Libs\obj\Release\STDLibs.csproj.CoreCompileInputs.cache
+E:\Source\Git\Oursource\STD\Common\STD_Libs\obj\Release\STDLibs.csproj.CopyComplete
+E:\Source\Git\Oursource\STD\Common\STD_Libs\obj\Release\STDLibs.dll
+E:\Source\Git\Oursource\STD\Common\STD_Libs\obj\Release\STDLibs.pdb
